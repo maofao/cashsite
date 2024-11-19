@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+</head>
+<body>
+    <h1>Ваша корзина</h1>
+    <ul>
+        {% for item in cart_items %}
+            <li>{{ item.name }} - {{ item.price }} руб.</li>
+        {% endfor %}
+    </ul>
+    <p><strong>Итого: {{ total }} руб.</strong></p>
+
+    <a href="/clear_cart">Очистить корзину</a> |
+    <a href="/">Вернуться в магазин</a>
+</body>
+</html>
+
